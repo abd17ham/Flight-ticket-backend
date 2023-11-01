@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const app = require("./app");
 
-const DB = process.env.MONGO_URL;
+const DB = 'mongodb+srv://admin:admin123@cluster0.itgt9py.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose
   .connect(DB, {
