@@ -1,7 +1,15 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
-
+const app=express()
+app.use(cors(
+  {
+    origin:["https://deploy-mern-1whq.vercel.app"],
+    methods:["POST","GET"],
+    credentials:true
+  }
+  ));
+app.use(express.json())
 
 dotenv.config();
 const app = require("./app");
